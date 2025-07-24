@@ -1,0 +1,28 @@
+# Ignore IDE and workspace settings
+*.classpath
+*.project
+*.settings/
+.idea/
+.vscode/
+
+# Ignore build and compiled files
+bin/
+target/
+*.class
+*.jar
+
+# Ignore Python cache and environments
+_pycache_/
+venv/
+*.pyc
+*.pyo
+
+# Ignore large ML/data files
+*.pkl
+*.h5
+*.yml
+*.csv
+*.zip
+
+# Ignore logs
+*.log

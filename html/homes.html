@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Database</title>
+</head>
+<body>
+    <h1>Add User</h1>
+    <form method="POST">
+        Name: <input type="text" name="name">
+        Age: <input type="number" name="age">
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Saved Users:</h2>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.name }} - {{ user.age }} years old</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
