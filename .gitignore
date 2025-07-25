@@ -25,4 +25,4 @@ venv/
 *.zip
 
 # Ignore logs
-*.log
+*.log# Ignore auth.db
