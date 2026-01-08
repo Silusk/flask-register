@@ -26,7 +26,7 @@ def home():
 from flask import send_file
 @app.route('/google959e5e78a9ff2f90.html')
 def google_verify():
-    file_path = os.path.join(os.path.dirname(os.path.abspath(_file_)), 'google959e5e78a9ff2f90.html')
+    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'google959e5e78a9ff2f90.html')
     return send_file(file_path)
     
 @app.route("/register", methods=["POST", "GET"])
