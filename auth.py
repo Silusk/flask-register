@@ -22,7 +22,11 @@ with app.app_context():
 @app.route("/")
 def home():
     return render_template("home.html")
-
+    
+@app.route("/google959e5e78a9ff2f90.html")
+def google_verify():
+    return send_from_directory('.','google959e5e78a9ff2f90.html')
+    
 @app.route("/register", methods=["POST", "GET"])
 def register():
     if request.method == "POST":
