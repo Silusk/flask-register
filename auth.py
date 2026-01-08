@@ -23,9 +23,11 @@ with app.app_context():
 def home():
     return render_template("home.html")
     
-@app.route("/google959e5e78a9ff2f90.html")
+from flask import send_file
+@app.route('/google959e5e78a9ff2f90.html')
 def google_verify():
-    return send_from_directory('.','google959e5e78a9ff2f90.html')
+    file_path = os.path.join(os.path.dirname(os.path.abspath(_file_)), 'google959e5e78a9ff2f90.html')
+    return send_file(file_path)
     
 @app.route("/register", methods=["POST", "GET"])
 def register():
