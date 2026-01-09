@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://forexple.onrender.com/static/robots.txt
+Sitemap: https://forexple.onrender.com/robots.txt
+
