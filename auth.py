@@ -28,6 +28,11 @@ from flask import send_file
 def google_verify():
     file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'google959e5e78a9ff2f90.html')
     return send_file(file_path)
+
+from flask import send_from_directory
+@app.route("/robots.txt")
+def robots():
+    return send_from_directory("static","robots.txt")
     
 @app.route("/register", methods=["POST", "GET"])
 def register():
