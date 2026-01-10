@@ -4,7 +4,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+uri= os.environ.get('DATABASE_URL')
+if uri and uri.startswith("postgres://"):
+    uri=uri.replace("postgres://","postgresql://",1)
+app.confif["SQLALCHEMY_DATABASE_URI"]=uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'devsecret')
 
@@ -89,5 +92,3 @@ def logout():
     flash("You have been logged out.")
     return redirect(url_for("home"))
 
-if __name__ == "__main__":
-    app.run(debug=True)
